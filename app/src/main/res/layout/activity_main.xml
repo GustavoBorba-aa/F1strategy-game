@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0A"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgBackgroundSenna"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ayrton_senna_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/formulalogo" />
+
+    <TextView
+        android:id="@+id/textAdversario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:letterSpacing="0.15"
+        android:text="CONDIÇÃO DA PISTA"
+        android:textAllCaps="true"
+        android:textColor="#FFD700"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <ImageView
+        android:id="@+id/imageResultado"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAdversario"
+        app:srcCompat="@drawable/pneu_amarelo" />
+
+    <TextView
+        android:id="@+id/txtEscolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#99000000"
+        android:fontFamily="monospace"
+        android:paddingLeft="20dp"
+        android:paddingTop="6dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="6dp"
+        android:text="SUA ESCOLHA: ---"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageResultado" />
+
+    <FrameLayout
+        android:id="@+id/frameStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="#E10600"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEscolha">
+
+        <TextView
+            android:id="@+id/textStatusPista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E61A1A24"
+            android:gravity="center"
+            android:padding="18dp"
+            android:text="Aguardando largada..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textInstrucao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="SELECIONE SEU COMPOSTO"
+        android:textColor="#888888"
+        android:textSize="10sp"
+        android:letterSpacing="0.2"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameStatus" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBotões"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInstrucao">
+
+        <ImageButton
+            android:id="@+id/btnMacio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="selecionarMacio"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/pneu_vermelho" />
+
+        <ImageButton
+            android:id="@+id/btnChuva"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="selecionarChuva"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/pneu_verde" />
+
+        <ImageButton
+            android:id="@+id/btnDuro"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="selecionarDuro"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/pneu_branco" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
