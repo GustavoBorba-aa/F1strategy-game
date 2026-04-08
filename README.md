@@ -8,7 +8,7 @@ Um jogo de estratégia casual inspirado na Fórmula 1, onde o jogador precisa to
 
 O **F1 Strategy Game** aplica a lógica clássica de **Pedra, Papel e Tesoura** ao universo do automobilismo.
 
-O desafio é simples: a condição climática muda a cada rodada e você deve escolher o pneu correto para não “rodar” na pista.
+O desafio é simples: a condição climática muda a cada rodada e você deve escolher o pneu correto para não “rodar” na pista ou não ser chamado ao box.
 
 ---
 
@@ -16,20 +16,25 @@ O desafio é simples: a condição climática muda a cada rodada e você deve es
 
 O jogo compara a escolha do jogador com uma condição climática gerada aleatoriamente:
 
-| Condição Sorteada | Pneu Escolhido        | Resultado              |
-|------------------|----------------------|------------------------|
-| ☀️ Sol           | 🔴 Pneu Macio         | ✅ Sucesso              |
-| ☀️ Sol           | 🟢 Pneu Intermediário | ⚠️ Desgaste excessivo  |
-| 🌧️ Chuva        | 🟢 Pneu Intermediário | ✅ Sucesso              |
-| 🌧️ Chuva        | 🔴 Pneu Macio         | ❌ VOCÊ RODOU!         |
+| Condição Sorteada      | Pneu Escolhido        | Resultado                      |
+|-----------------------|----------------------|----------------------------------|
+| ☀️ Sol                | 🔴 Pneu Macio (vermelho)| ✅ Sucesso, fastest lap       |  
+| ☀️ Sol                | 🟢 Pneu Intermediário   | 📢 Toto Wolff: "BOX, BOX!     |
+| 🌧️ Chuva              | 🟢 Pneu Intermediário   | ✅ Sucesso, fastest lap      |
+| 🌧️ Chuva              | ⚪Pneu Duro             | 📢 Toto Wolff: "BOX, BOX!     |
+| 🌧️ Chuva              | 🔴 Pneu Macio           | ⚠️ Carro 12 fora da corrida  |              
+| 🔥 Pista Quente       | ⚪ Pneu Duro (Branco)   | ✅ Sucesso, fastest lap       |               
+| 🔥 Pista Quente       | 🔴 Pneu Macio           | 📢 Toto Wolff: "BOX, BOX!     | 
+| 🔥 Pista Quente       | 🟢 Pneu Intermediário   | ⚠️ Carro 12 fora da corrida   |         
 
 ---
 
 ## 🚀 Funcionalidades
 
-- 🎲 **Geração Aleatória**: o clima muda a cada rodada  
+- 🎲 **Geração Aleatória**: o clima muda a cada rodada conforme for sorteado no random  
 - 🎨 **Feedback Visual**: interface intuitiva com ícones de pneus da F1  
 - 🏁 **Imersão**: fundo temático com referências ao automobilismo  
+- 🆕 **Eventos Especiais**: mensagens temáticas como **"BOX, BOX!"**  
 
 ---
 
