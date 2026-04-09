@@ -54,7 +54,7 @@ O jogo compara a escolha do jogador com uma condição climática gerada aleator
 
 
 
-*Interface principal: Decidindo o pneu sob chuva.*
+*Interface principal: Decidindo qual composto escolher.*
 
 ---
 
@@ -62,3 +62,8 @@ O jogo compara a escolha do jogador com uma condição climática gerada aleator
 
 ```bash
 git clone https://github.com/seu-usuario/F1strategy-game.git
+
+👨‍💻 Desenvolvido por Gustavo Borba 🏎️💨
+
+
+
