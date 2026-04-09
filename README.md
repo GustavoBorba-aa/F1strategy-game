@@ -48,9 +48,11 @@ O jogo compara a escolha do jogador com uma condição climática gerada aleator
 
 ## 📸 Screenshots
 
-<div align="center">
-  <img src="Imagens/formula-inicial.png" width="300px" alt="Tela inicial do F1 Strategy">
-</div>
+
+
+<img width="359" height="659" alt="formula-inicial" src="https://github.com/user-attachments/assets/599d3003-5250-49dd-8bf1-1360b55c3fdc" />
+
+
 
 *Interface principal: Decidindo o pneu sob chuva.*
 
