@@ -63,7 +63,6 @@ O jogo compara a escolha do jogador com uma condição climática gerada aleator
 ```bash
 git clone https://github.com/seu-usuario/F1strategy-game.git
 
-👨‍💻 Desenvolvido por Gustavo Borba 🏎️💨
 
 
 
